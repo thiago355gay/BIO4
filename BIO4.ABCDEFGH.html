@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bio4 - Revista Interactiva Verde</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #e0f7e0, #e8fff5);
+      color: #2e4d2c;
+    }
+    header {
+      background: #2e7d32;
+      padding: 2em;
+      text-align: center;
+    }
+    header img {
+      max-width: 200px;
+      height: auto;
+    }
+    header p {
+      color: white;
+      font-weight: 700;
+      margin-top: 0.5em;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: sticky; top: 0;
+      z-index: 1000;
+      flex-wrap: wrap;
+    }
+    nav button {
+      flex: 1 1 120px;
+      padding: 1em;
+      border: none;
+      background: none;
+      font-weight: bold;
+      font-size: 1rem;
+      color: #2e7d32;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+      min-width: 100px;
+    }
+    nav button:hover, nav button.active {
+      background: #2e7d32;
+      color: white;
+    }
+    .tab {
+      display: none;
+      max-width: 1000px;
+      margin: 2em auto;
+      padding: 2em;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      animation: fadeIn 0.8s ease;
+    }
+    .tab.active {
+      display: block;
+    }
+    h2 {
+      color: #2e7d32;
+      margin-bottom: 1rem;
+    }
+    p, ul {
+      line-height: 1.6;
+      margin-bottom: 1em;
+    }
+    ul {
+      padding-left: 1.2em;
+    }
+    .tarjeta {
+      background: #e8f5e9;
+      border-left: 5px solid #66bb6a;
+      padding: 1em;
+      margin-bottom: 1em;
+      border-radius: 6px;
+    }
+    img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-top: 1em;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1em;
+    }
+    th, td {
+      border: 2px solid #66bb6a;
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background-color: #a5d6a7;
+      color: #1b5e20;
+      font-weight: 700;
+    }
+    footer {
+      text-align: center;
+      padding: 2em;
+      background: #2e7d32;
+      color: white;
+      margin-top: 2em;
+      border-top: 4px solid #66bb6a;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="https://www.bio4.com.ar/wp-content/themes/vox/images/logo.png" alt="Logo Bio4" />
+  <p>Economía Circular • Energía Verde • Innovación Sustentable</p>
+</header>
+
+<nav>
+  <button class="tab-button active" data-tab="editorial">Editorial</button>
+  <button class="tab-button" data-tab="infografia">Infografía</button>
+  <button class="tab-button" data-tab="analisis">Análisis</button>
+  <button class="tab-button" data-tab="comparacion">Comparación</button>
+  <button class="tab-button" data-tab="beneficios">Beneficios</button>
+  <button class="tab-button" data-tab="actualidad">Actualidad</button>
+  <button class="tab-button" data-tab="creditos">Créditos</button>
+</nav>
+
+<div id="editorial" class="tab active">
+  <h2>Editorial</h2>
+  <p>
+    La economía circular es un sistema económico que busca mantener el valor de los productos, materiales y recursos en la economía el mayor tiempo posible, reduciendo al mínimo la generación de residuos y la contaminación. A diferencia del modelo tradicional lineal de "tomar, fabricar, consumir y desechar", la economía circular promueve estrategias como la reutilización, reparación, remanufactura, reciclaje y el aprovechamiento de los residuos como nuevos recursos.
+  </p>
+  <p>
+    En Bio4, este enfoque se implementa aprovechando los subproductos de la producción de bioetanol, especialmente la burlanda, que es utilizada como alimento proteico para la ganadería. Además, el estiércol producido por el ganado se destina a digestores anaeróbicos que generan energía renovable, cerrando así el ciclo productivo y disminuyendo el impacto ambiental.
+  </p>
+  <p>
+    El proceso productivo de Bio4 comienza con la molienda del maíz, donde se expone el almidón. Luego, en la etapa de licuefacción, se agrega agua y la enzima amilasa transforma el almidón en glucosa. Posteriormente, durante la fermentación, la glucosa se convierte en alcohol gracias a la acción de levaduras. Este alcohol es separado y purificado a través de destilación y anhidratación, resultando en bioetanol.
+  </p>
+  <p>
+    Paralelamente, la burlanda y la vinaza liviana se separan mediante centrifugación. La burlanda, que puede estar húmeda o seca, es un alimento de alta calidad proteica para bovinos. Por otro lado, la vinaza liviana pasa por biodigestores donde mediante digestión anaeróbica se produce biogás —compuesto principalmente por metano— que alimenta motores para generar energía eléctrica renovable.
+  </p>
+  <p>
+    Este modelo no solo representa una producción más limpia y eficiente, sino que también aporta importantes beneficios económicos y ambientales.
+  </p>
+  <img src="https://www.bio4.com.ar/wp-content/uploads/2020/09/DSC_0654-500x310.jpg" alt="Vista general de la planta Bio4" />
+</div>
+
+<div id="infografia" class="tab">
+  <h2>Infografía del Circuito Productivo</h2>
+  <p>
+    La cadena productiva de Bio4 integra diversas etapas que transforman el maíz en múltiples productos útiles y energía renovable. El gráfico a continuación ilustra el proceso completo desde la materia prima hasta los subproductos y su aprovechamiento.
+  </p>
+  <ul>
+    <li><strong>Molienda:</strong> Exposición del almidón en el grano de maíz.</li>
+    <li><strong>Licuefacción:</strong> Conversión del almidón en glucosa mediante amilasa.</li>
+    <li><strong>Fermentación:</strong> Transformación de glucosa en alcohol con levadura.</li>
+    <li><strong>Destilación y Anhidratación:</strong> Obtención de bioetanol puro.</li>
+    <li><strong>Centrifugación:</strong> Separación de burlanda y vinaza liviana.</li>
+    <li><strong>Biodigestión:</strong> Producción de biogás para energía renovable.</li>
+  </ul>
+  <img src="https://media.puntal.com.ar/p/1007da05758decbd84ea18bb904136f6/adjuntos/270/imagenes/001/544/0001544586/1200x0/smart/tranquera-abiertajpg.jpg" alt="Proceso Bio4" />
+</div>
+
+<div id="analisis" class="tab">
+  <h2>Análisis del mercado energético</h2>
+  <p>
+    La transición hacia energías renovables es esencial para mitigar el cambio climático. Los biocombustibles como el bioetanol de Bio4 juegan un papel crucial al reducir las emisiones contaminantes. Estudios demuestran que el bioetanol puede disminuir hasta un 67% las emisiones de gases de efecto invernadero en comparación con los combustibles fósiles tradicionales como la nafta.
+  </p>
+  <p>
+    Además, la economía circular aplicada en la producción de Bio4 optimiza el uso de recursos y minimiza residuos, lo que representa no solo una ventaja ambiental sino también una oportunidad económica para la región de Río Cuarto y el país. La innovación tecnológica y la integración de biogás complementan este modelo sustentable, ofreciendo una fuente energética limpia, eficiente y competitiva.
+  </p>
+  <img src="https://100seguro.com.ar/wp-content/uploads/2025/05/Planta-Bio4-990x660.jpg" alt="Torres industriales Bio4" />
+</div>
+
+<div id="comparacion" class="tab">
+  <table>
+    <thead>
+      <tr>
+        <th>Aspecto</th>
+        <th>Bio4</th>
+        <th>Empresa Tradicional (Petrolera)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Uso de recursos</td>
+        <td>Utiliza maíz como materia prima renovable y maximiza el aprovechamiento de subproductos (burlanda, vinaza). Reutiliza agua y energía.</td>
+        <td>Depende de recursos fósiles no renovables, extracción intensiva de petróleo, con mayor desperdicio energético.</td>
+      </tr>
+      <tr>
+        <td>Manejo de residuos</td>
+        <td>Aplica economía circular, transformando residuos orgánicos en biogás y alimento para ganado, minimizando desechos.</td>
+        <td>Genera grandes cantidades de residuos tóxicos y contaminantes, manejo más lineal con mayor impacto ambiental.</td>
+      </tr>
+      <tr>
+        <td>Externalidades</td>
+        <td>Produce externalidades positivas: reducción de gases de efecto invernadero, empleo verde, educación ambiental.</td>
+        <td>Externalidades negativas frecuentes: contaminación del aire y agua, derrames, emisiones de CO2 elevadas, impacto social y ambiental.</td>
+      </tr>
+      <tr>
+        <td>Medición huella de carbono</td>
+        <td>Reporta reducción de emisiones (hasta 67% menos que combustibles fósiles) y busca mejorar mediante biogás y procesos circulares.</td>
+        <td>Generalmente tiene una huella de carbono alta y menos mecanismos de reducción efectivos o transparentes.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div id="beneficios" class="tab">
+  <h2>Beneficios destacados</h2>
+  <div class="tarjeta">🌱 Disminución significativa de gases de efecto invernadero, ayudando a mitigar el cambio climático.</div>
+  <div class="tarjeta">♻️ Maximización del aprovechamiento de residuos y subproductos.</div>
+  <div class="tarjeta">🐄 Producción de alimento animal de alta calidad (burlanda), fomentando la ganadería sostenible.</div>
+  <div class="tarjeta">💧 Uso eficiente y reutilización del agua en procesos industriales.</div>
+  <div class="tarjeta">⚡ Generación de energía renovable para la región, incluyendo biogás y energía eléctrica.</div>
+  <div class="tarjeta">💰 Ahorro energético y aumento del octanaje del combustible producido.</div>
+  <div class="tarjeta">🌿 Producción limpia, eficiente y responsable, contribuyendo a un desarrollo sostenible.</div>
+  <div class="tarjeta">🔄 Conversión de subproductos con poco valor en activos energéticos y fertilizantes orgánicos.</div>
+</div>
+
+<div id="actualidad" class="tab">
+  <h2>Bio4 en 2025</h2>
+  <p>
+    Bio4 continúa expandiéndose con la construcción de una nueva planta de biogás que aprovecha los residuos orgánicos para producir energía renovable adicional. Este avance permite aumentar la autonomía energética y reduce aún más la huella ambiental de la producción.
+  </p>
+  <p>
+    Además, Bio4 impulsa programas de educación ambiental en escuelas rurales, fomentando la conciencia ecológica y la formación en energías limpias entre las nuevas generaciones.
+  </p>
+  <p>
+    La empresa también ha comenzado a exportar burlanda a mercados internacionales, destacando la calidad y sostenibilidad de sus productos, y posicionándose como un referente en la economía circular en Latinoamérica.
+  </p>
+  <img src="https://www.bio4.com.ar/wp-content/uploads/2020/09/DSC_0654-500x310.jpg" alt="Entrada a la planta con bandera argentina" />
+</div>
+
+<div id="creditos" class="tab">
+  <h2>Créditos</h2>
+  <p>Revista desarrollada por:</p>
+  <ul>
+    <li>Thiago Gay</li>
+    <li>Jordan Seibald</li>
+    <li>Agustín Allione</li>
+    <li>Benicio Campos</li>
+  </ul>
+  <p>&copy; 2025 Todos los derechos reservados.</p>
+</div>
+
+<footer>
+  <p>© 2025 Revista Verde – Edición Bio4</p>
+</footer>
+
+<script>
+  const buttons = document.querySelectorAll(".tab-button");
+  const tabs = document.querySelectorAll(".tab");
+
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      buttons.forEach(b => b.classList.remove("active"));
+      tabs.forEach(t => t.classList.remove("active"));
+      btn.classList.add("active");
+      const tabId = btn.dataset.tab;
+      document.getElementById(tabId).classList.add("active");
+    });
+  });
+</script>
+
+</body>
+</html>
